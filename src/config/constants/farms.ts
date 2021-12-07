@@ -1,23 +1,23 @@
 import contracts from './contracts'
 import { FarmConfig, QuoteToken } from './types'
 
-const TACO_BUSD_LP_MAINNET = `0x3BB3B98c0FABE30166E6B7D62aEef393249871E4`
-const TACO_BNB_LP_MAINNET = `0x5590d45592C846DD820D360dd5Ba6b2610cDeeFB`
-const TACO_MAINNET = `0x9066e87Bac891409D690cfEfA41379b34af06391`
+const TCTM_BUSD_LP_MAINNET = `0xc3bdff1fa4985b9977dddf2ea2b98c75dd4ec65c`
+const TCTM_BNB_LP_MAINNET = `0xc3bdff1fa4985b9977dddf2ea2b98c75dd4ec65c`
+const TCTM_MAINNET = `0xBCFeDe73a76E2294B82d28c2737F9eECdf0342eB`
 
 const farms: FarmConfig[] = [
   {
     risk: 10,
     lpSymbol: 'TCTM-BUSD LP',
     lpAddresses: {
-      97: '0xbcfede73a76e2294b82d28c2737f9eecdf0342eb',
-      56: TACO_BUSD_LP_MAINNET,
+      97: '',
+      56: TCTM_BUSD_LP_MAINNET,
     },
-    depositFeeBP: '1%',
+    depositFeeBP: '0%',
     tokenSymbol: 'TCTM',
     tokenAddresses: {
-      97: '0xbcfede73a76e2294b82d28c2737f9eecdf0342eb',
-      56: TACO_MAINNET,
+      97: '',
+      56: TCTM_MAINNET,
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
@@ -26,18 +26,18 @@ const farms: FarmConfig[] = [
     risk: 5,
     lpSymbol: 'TCTM-BNB LP',
     lpAddresses: {
-      97: '0xbcfede73a76e2294b82d28c2737f9eecdf0342eb',
-      56: TACO_BNB_LP_MAINNET,
+      97: '',
+      56: TCTM_BNB_LP_MAINNET,
     },
     tokenSymbol: 'TCTM',
     tokenAddresses: {
-      97: '0xbcfede73a76e2294b82d28c2737f9eecdf0342eb',
-      56: TACO_MAINNET,
-    },
+      97: '',
+      56: TCTM_MAINNET,
+    }, 
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
-  },
-  {
+  }, 
+  /* {
     risk: 3,
     lpSymbol: 'BNB-BUSD LP',
     lpAddresses: {
@@ -52,6 +52,23 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
     depositFeeBP: '1%',
+  }, */
+  // Pools
+  {
+    risk: 5,
+    isTokenOnly: true,
+    lpSymbol: 'TCTM',
+    lpAddresses: {
+      97: '',
+      56: TCTM_MAINNET, // TCTM-BUSD LP
+    },
+    tokenSymbol: 'TCTM',
+    tokenAddresses: {
+      97: '',
+      56: TCTM_MAINNET,
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
   },
   /* {
     risk: 1,
@@ -148,15 +165,15 @@ const farms: FarmConfig[] = [
   {
     risk: 5,
     isTokenOnly: true,
-    lpSymbol: 'TACO',
+    lpSymbol: 'TCTM',
     lpAddresses: {
       97: '',
-      56: TACO_BUSD_LP_MAINNET, // TACO-BUSD LP
+      56: TCTM_BUSD_LP_MAINNET, // TCTM-BUSD LP
     },
-    tokenSymbol: 'TACO',
+    tokenSymbol: 'TCTM',
     tokenAddresses: {
       97: '',
-      56: TACO_MAINNET,
+      56: TCTM_MAINNET,
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
@@ -167,7 +184,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'BUSD',
     lpAddresses: {
       97: '',
-      56: TACO_BUSD_LP_MAINNET, // TACO-BUSD LP (BUSD-BUSD will ignore)
+      56: TCTM_BUSD_LP_MAINNET, // TCTM-BUSD LP (BUSD-BUSD will ignore)
     },
     tokenSymbol: 'BUSD',
     tokenAddresses: {
@@ -307,30 +324,30 @@ const farms: FarmConfig[] = [
   },
   {
     risk: 3,
-    lpSymbol: 'TACO-USDT LP',
+    lpSymbol: 'TCTM-USDT LP',
     lpAddresses: {
       97: '',
       56: '0xc6d0728a0a6acf362cbce0433806d89942fb4403', // LINA-BUSD LP
     },
-    tokenSymbol: 'TACO',
+    tokenSymbol: 'TCTM',
     tokenAddresses: {
       97: '',
-      56: TACO_MAINNET,
+      56: TCTM_MAINNET,
     },
     quoteTokenSymbol: QuoteToken.USDT,
     quoteTokenAdresses: contracts.usdt,
   },
   {
     risk: 3,
-    lpSymbol: 'TACO-USDC LP',
+    lpSymbol: 'TCTM-USDC LP',
     lpAddresses: {
       97: '',
       56: '0xe888076a3fe450cb3b31db7dac82be38faad3174', // LINA-BUSD LP
     },
-    tokenSymbol: 'TACO',
+    tokenSymbol: 'TCTM',
     tokenAddresses: {
       97: '',
-      56: TACO_MAINNET,
+      56: TCTM_MAINNET,
     },
     quoteTokenSymbol: QuoteToken.USDC,
     quoteTokenAdresses: contracts.usdc,

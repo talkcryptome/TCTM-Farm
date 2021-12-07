@@ -1,11 +1,11 @@
 export default {
   cake: {
-    56: '0x9066e87Bac891409D690cfEfA41379b34af06391', // TACO TOKEN
-    97: '0xbcfede73a76e2294b82d28c2737f9eecdf0342eb',
+    56: '0xBCFeDe73a76E2294B82d28c2737F9eECdf0342eB', // TCTM TOKEN
+    97: '',
   },
   masterChef: {
-    56: '0x36f44a1C8e973739D0034FF1B9B9f6c4c7085625',
-    97: '0x392C148b1c5f276a2867B79d34648cf951468aAC',
+    56: '0xf54302161B1dcA5EACF43a51E81E7F99562114ED',
+    97: '',
   },
   wbnb: {
     56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
