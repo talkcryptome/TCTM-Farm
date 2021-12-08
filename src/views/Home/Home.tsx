@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, BaseLayout } from '@pancakeswap-libs/uikit'
-import useI18n from 'hooks/useI18n'
+import { /* Heading, Text, */ BaseLayout } from '@pancakeswap-libs/uikit'
+// import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
 import FarmStakingCard from './components/FarmStakingCard'
 import CakeStats from './components/CakeStats'
 import TotalValueLockedCard from './components/TotalValueLockedCard'
 import TwitterCard from './components/TwitterCard'
 
-const Hero = styled.div`
+/* const Hero = styled.div`
   align-items: center;
   background-repeat: no-repeat;
   background-position: top center;
@@ -28,7 +28,7 @@ const Hero = styled.div`
     height: 10px;
     padding-top: 0;
   }
-`
+` */
 
 const Cards = styled(BaseLayout)`
   align-items: start;
@@ -54,7 +54,7 @@ const Cards = styled(BaseLayout)`
 `
 
 const Home: React.FC = () => {
-  const TranslateString = useI18n()
+  // const TranslateString = useI18n()
 
   return (
     <Page>

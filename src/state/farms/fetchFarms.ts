@@ -123,9 +123,9 @@ const fetchFarms = async () => {
           TCTMPerBlock: new BigNumber(TCTMPerBlock).toNumber(),
         }
       } catch (ex) {
-        console.log('ERROR')
+        /* console.log('ERROR')
         console.log(farmConfig.lpSymbol)
-        console.log(ex)
+        console.log(ex) */
         return Promise.reject()
       }
     }),
