@@ -27,14 +27,14 @@ const CakeStats = () => {
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
   const farms = useFarms()
-  const tacoPrice = usePriceCakeBusd()
+  const TCTMPrice = usePriceCakeBusd()
   const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0)
   const cakeSupply = getBalanceNumber(circSupply)
-  const marketCap = tacoPrice.times(circSupply)
+  const marketCap = TCTMPrice.times(circSupply)
 
-  let tacoPerBlock = 0
-  if (farms && farms[0] && farms[0].tacoPerBlock) {
-    tacoPerBlock = new BigNumber(farms[0].tacoPerBlock).div(new BigNumber(10).pow(18)).toNumber()
+  let TCTMPerBlock = 0
+  if (farms && farms[0] && farms[0].TCTMPerBlock) {
+    TCTMPerBlock = new BigNumber(farms[0].TCTMPerBlock).div(new BigNumber(10).pow(18)).toNumber()
   }
 
   return (
@@ -58,7 +58,7 @@ const CakeStats = () => {
         <Row>
           <Text fontSize="14px">{TranslateString(540, 'New TCTM/block')}</Text>
           <Text bold fontSize="14px">
-            {tacoPerBlock}
+            {TCTMPerBlock}
           </Text>
         </Row>
       </CardBody>

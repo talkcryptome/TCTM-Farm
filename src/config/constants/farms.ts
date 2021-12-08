@@ -2,12 +2,12 @@ import contracts from './contracts'
 import { FarmConfig, QuoteToken } from './types'
 
 const TCTM_BUSD_LP_MAINNET = `0xc3bdff1fa4985b9977dddf2ea2b98c75dd4ec65c`
-const TCTM_BNB_LP_MAINNET = `0xc3bdff1fa4985b9977dddf2ea2b98c75dd4ec65c`
+// const TCTM_BNB_LP_MAINNET = `0xc3bdff1fa4985b9977dddf2ea2b98c75dd4ec65c`
 const TCTM_MAINNET = `0xBCFeDe73a76E2294B82d28c2737F9eECdf0342eB`
 
 const farms: FarmConfig[] = [
   {
-    risk: 10,
+    risk: 1,
     lpSymbol: 'TCTM-BUSD LP',
     lpAddresses: {
       97: '',
@@ -22,7 +22,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
-  {
+  /* {
     risk: 5,
     lpSymbol: 'TCTM-BNB LP',
     lpAddresses: {
@@ -36,8 +36,8 @@ const farms: FarmConfig[] = [
     }, 
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
-  }, 
-  /* {
+  }, */
+  {
     risk: 3,
     lpSymbol: 'BNB-BUSD LP',
     lpAddresses: {
@@ -52,7 +52,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
     depositFeeBP: '1%',
-  }, */
+  }, 
   // Pools
   {
     risk: 5,
