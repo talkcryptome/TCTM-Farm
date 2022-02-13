@@ -29,7 +29,17 @@ const config: MenuEntry[] = [
   {
     label: 'Pool',
     icon: 'PoolIcon',
-    href: '/trucks',
+    href: '/pools',
+  },
+  {
+    label: 'Vault',
+    icon: 'PoolIcon',
+    href: '/vaults',
+  },
+  {
+    label: 'Bridge',
+    icon: 'PoolIcon',
+    href: '/bridges',
   },
 
 ]

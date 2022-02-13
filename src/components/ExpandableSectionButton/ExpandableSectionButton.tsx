@@ -30,6 +30,7 @@ const ExpandableSectionButton: React.FC<ExpandableSectionButtonProps> = ({ onCli
 }
 
 ExpandableSectionButton.defaultProps = {
+  // eslint-disable-next-line  
   expanded: false,
 }
 
