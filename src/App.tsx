@@ -15,6 +15,7 @@ import PageLoader from './components/PageLoader'
 const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
 const Vaults = lazy(() => import('./views/Vault'))
+const Bridges = lazy(() => import('./views/Bridge'))
 // const Lottery = lazy(() => import('./views/Lottery'))
 // const Pools = lazy(() => import('./views/Pools'))
 // const Ifos = lazy(() => import('./views/Ifos'))
@@ -57,7 +58,7 @@ const App: React.FC = () => {
               <Vaults />
             </Route>
             <Route path="/bridges">
-              <Farms tokenMode />
+              <Bridges />
             </Route>
             {/* <Route path="/pools"> */}
             {/*  <Pools /> */}
