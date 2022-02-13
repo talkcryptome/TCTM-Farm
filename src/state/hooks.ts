@@ -3,7 +3,7 @@ import { useEffect, /* useMemo */ } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import useRefresh from 'hooks/useRefresh'
 import { fetchFarmsPublicDataAsync, /* fetchPoolsPublicDataAsync, */ fetchPoolsUserDataAsync } from './actions'
-import { State, Farm, Pool } from './types'
+import { State, Farm, Pool, Vault } from './types'
 import { QuoteToken } from '../config/constants/types'
 
 const ZERO = new BigNumber(0)
@@ -64,6 +64,36 @@ export const usePoolFromPid = (sousId): Pool => {
   const pool = useSelector((state: State) => state.pools.data.find((p) => p.sousId === sousId))
   return pool
 }
+
+// Vaults
+
+export const useVaults = (): Vault[] => {
+  const vaults = useSelector((state: State) => state.vaults.data)
+  return vaults
+}
+
+export const useVaultFromPid = (pid): Vault => {
+  const vault = useSelector((state: State) => state.vaults.data.find((f) => f.pid === pid))
+  return vault
+}
+
+export const useVaultFromSymbol = (lpSymbol: string): Vault => {
+  const vault = useSelector((state: State) => state.vaults.data.find((f) => f.lpSymbol === lpSymbol))
+  return vault
+}
+
+export const useVaultUser = (pid) => {
+  const vault = useVaultFromPid(pid)
+
+  return {
+    allowance: vault.userData ? new BigNumber(vault.userData.allowance) : new BigNumber(0),
+    tokenBalance: vault.userData ? new BigNumber(vault.userData.tokenBalance) : new BigNumber(0),
+    stakedBalance: vault.userData ? new BigNumber(vault.userData.stakedBalance) : new BigNumber(0),
+    earnings: vault.userData ? new BigNumber(vault.userData.earnings) : new BigNumber(0),
+  }
+}
+
+
 
 // Prices
 

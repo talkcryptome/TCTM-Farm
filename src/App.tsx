@@ -7,12 +7,14 @@ import { useFetchPublicData } from 'state/hooks'
 import GlobalStyle from './style/Global'
 import Menu from './components/Menu'
 import PageLoader from './components/PageLoader'
+// import Vault from 'views/Vault'
 
 
 // Route-based code splitting
 // Only pool is included in the main bundle because of it's the most visited page'
 const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
+const Vaults = lazy(() => import('./views/Vault'))
 // const Lottery = lazy(() => import('./views/Lottery'))
 // const Pools = lazy(() => import('./views/Pools'))
 // const Ifos = lazy(() => import('./views/Ifos'))
@@ -48,7 +50,13 @@ const App: React.FC = () => {
             <Route path="/farms">
               <Farms />
             </Route>
-            <Route path="/trucks">
+            <Route path="/pools">
+              <Farms tokenMode />
+            </Route>
+            <Route path="/vaults">
+              <Vaults />
+            </Route>
+            <Route path="/bridges">
               <Farms tokenMode />
             </Route>
             {/* <Route path="/pools"> */}
