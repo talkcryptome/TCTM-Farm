@@ -41,6 +41,11 @@ const config: MenuEntry[] = [
     icon: 'PoolIcon',
     href: '/bridges',
   },
+  {
+    label: 'Aggregator',
+    icon: 'PoolIcon',
+    href: '/aggregator',
+  },
 
 ]
 
