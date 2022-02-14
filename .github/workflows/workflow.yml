@@ -3,24 +3,20 @@ name: React CI
 on:
   push:
     branches:
-      - "master"
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
-
     steps:
       - uses: actions/checkout@v2
-      - name: Install dependencies
-      - run: npm install --force
-      - name: Build
-      - run: npm run build
-      - name: Set AWS credentials
+      - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-west-2
-      - name: Deploy to S3
-        run: aws s3 sync ./build/ s3://talkcryptotome-farm --delete
+          aws-region: ${{ secrets.AWS_REGION }}
+      - name: Build React App
+        run: npm install && npm run build
+      - name: Deploy app build to S3 bucket
+        run: aws s3 sync ./build/ s3://${{ secrets.AWS_S3_Bucket }} --delete
