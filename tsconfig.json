@@ -12,6 +12,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
+    "alwaysStrict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -21,8 +22,13 @@
     "jsx": "react-jsx",
     "strictNullChecks": false,
     "noImplicitAny": false,
-    "noFallthroughCasesInSwitch": true
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "downlevelIteration": true,
+    "noFallthroughCasesInSwitch": true,
+    "types": ["react-spring", "jest"]
   },
+  "exclude": ["node_modules", "cypress"],
   "include": [
     "src"
   ]
