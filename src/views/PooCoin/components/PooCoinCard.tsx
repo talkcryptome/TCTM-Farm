@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card, CardBody, Heading, /* Text */ } from '@pancakeswap-libs/uikit'
-// import { useWallet } from '@binance-chain/bsc-use-wallet'
 // import BigNumber from 'bignumber.js/bignumber'
 import styled from 'styled-components'
 // import { getBalanceNumber } from 'utils/formatBalance'
@@ -22,22 +21,22 @@ const Row = styled.div`
   justify-content: space-between;
   margin-bottom: 8px;
 `
-// const { account} = useWallet()
-const TinNetowrkCard = () => {
+
+const PooCoinCard = () => {
     return (
     <StyledTwitterCard>
       <CardBody>
         <Heading size="xl" mb="24px">
-          Use tin.network to see all your coins across multiple chains in your wallets, and all of your Farms and Pools in one place. Connect your wallet or enter your wallet address to get started. 
+        Use this chart to check out Coin Past Performance
         </Heading>
         <Iframe id="iframe-widget" 
-                height='1005'
-                url='https://tin.network/en/dashboard/'
-                width="100%"/>
+                url="https://poocoin.app/"
+                height="1505px" 
+                width="100%" />
                 
       </CardBody>
     </StyledTwitterCard>
   )
 }
 
-export default TinNetowrkCard
+export default PooCoinCard
