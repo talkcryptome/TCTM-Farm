@@ -52,25 +52,25 @@ const App: React.FC = () => {
             <Route path="/" exact>
               <Home />
             </Route>
-            <Route path="/farms">
+            <Route path="/https://farm.talkcryptotome.com">  
               <Farms />
             </Route>
-            <Route path="/pools">
+            <Route path="https://pool.talkcryptotome.com">
               <Farms tokenMode />
             </Route>
-            <Route path="/vaults">
+            <Route path="https://vault.talkcryptotome.com">
               <Vaults />
             </Route>
-            <Route path="/bridges">
+            <Route path="https://bridge.talkcryptotome.com">
               <Bridges />
             </Route>
-            <Route path="/aggregator">
+            <Route path="https://aggregator.talkcryptotome.com">
               <Aggregators />
             </Route>
-            <Route path="/dexguru">
+            <Route path="https://dex.talkcryptotome.com">
               <DexGurus />
             </Route>
-            <Route path="/poocoin">
+            <Route path="https://poo.talkcryptotome.com">
               <PooCoins />
             </Route>
             {/* <Route path="/pools"> */}
