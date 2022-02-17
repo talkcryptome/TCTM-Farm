@@ -10,10 +10,12 @@ const Menu = (props) => {
   const { account, connect, reset } = useWallet()
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
-
+  // const {pushed} = false
   return (
+
     <UikitMenu
       account={account}
+     // showMenu={false}
       login={connect}
       logout={reset}
       isDark={isDark}
