@@ -52,7 +52,7 @@ const App: React.FC = () => {
             <Route path="/" exact>
               <Home />
             </Route>
-            <Route path="/https://farm.talkcryptotome.com">
+            <Route path="/https://farm.talkcryptotome.com">  
               <Farms />
             </Route>
             <Route path="https://pool.talkcryptotome.com">
