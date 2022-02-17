@@ -17,7 +17,7 @@ const config: MenuEntry[] = [
       {
         label: 'Liquidity',
         href:
-          'https://exchange.talkcryptotome.com/#/add',
+          'https://exchange.talkcryptotome.com/#/liquidity',
       },
     ],
   },
@@ -33,18 +33,32 @@ const config: MenuEntry[] = [
   },
   {
     label: 'Vault',
-    icon: 'PoolIcon',
+    icon: 'MoonIcon',
     href: '/vaults',
   },
   {
     label: 'Bridge',
-    icon: 'PoolIcon',
+    icon: 'TicketIcon',
     href: '/bridges',
   },
   {
     label: 'Aggregator',
-    icon: 'PoolIcon',
+    icon: 'SunIcon',
     href: '/aggregator',
+  },
+  {
+    label: 'Charts',
+    icon: 'HamburgerIcon',
+    items: [
+      {
+        label: 'DexGuru',
+        href: '/dexguru',
+      },
+      {
+        label: 'PooCoins',
+        href: '/poocoin',
+      },
+    ],
   },
 
 ]
