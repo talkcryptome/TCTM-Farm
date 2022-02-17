@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { /* Heading, Text, */ BaseLayout } from '@pancakeswap-libs/uikit'
+import {/* Heading, Text, */ BaseLayout } from '@pancakeswap-libs/uikit'
 // import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
 import FarmStakingCard from './components/FarmStakingCard'
@@ -25,11 +25,11 @@ import TwitterCard from './components/TwitterCard'
     background: url();
     background-size: contain;
     background-position: left center, right center;
-    height: 10px;
+    height: 165px;
     padding-top: 0;
   }
-` */
-
+` 
+*/
 const Cards = styled(BaseLayout)`
   align-items: start;
   justify-content: start;

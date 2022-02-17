@@ -1,7 +1,7 @@
 import React, { useEffect, Suspense, lazy } from 'react'
 import { BrowserRouter as Router, /* Redirect, */ Route, Switch } from 'react-router-dom'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { ResetCSS } from '@pancakeswap-libs/uikit'
+import { ButtonMenu, ResetCSS } from '@pancakeswap-libs/uikit'
 import BigNumber from 'bignumber.js'
 import { useFetchPublicData } from 'state/hooks'
 import GlobalStyle from './style/Global'
@@ -17,6 +17,8 @@ const Farms = lazy(() => import('./views/Farms'))
 const Vaults = lazy(() => import('./views/Vault'))
 const Bridges = lazy(() => import('./views/Bridge'))
 const Aggregators = lazy(() => import('./views/Aggregator'))
+const DexGurus = lazy(() => import('./views/dexguru'))
+const PooCoins = lazy(() => import('./views/PooCoin'))
 // const Lottery = lazy(() => import('./views/Lottery'))
 // const Pools = lazy(() => import('./views/Pools'))
 // const Ifos = lazy(() => import('./views/Ifos'))
@@ -41,7 +43,8 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <ResetCSS />
+       <ResetCSS />
+       <ButtonMenu>
       <GlobalStyle />
       <Menu>
         <Suspense fallback={<PageLoader />}>
@@ -63,6 +66,12 @@ const App: React.FC = () => {
             </Route>
             <Route path="/aggregator">
               <Aggregators />
+            </Route>
+            <Route path="/dexguru">
+              <DexGurus />
+            </Route>
+            <Route path="/poocoin">
+              <PooCoins />
             </Route>
             {/* <Route path="/pools"> */}
             {/*  <Pools /> */}
@@ -88,6 +97,7 @@ const App: React.FC = () => {
           </Switch>
         </Suspense>
       </Menu>
+      </ButtonMenu>
     </Router>
   )
 }
