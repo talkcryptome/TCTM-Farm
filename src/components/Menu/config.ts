@@ -12,39 +12,39 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://swap.talkcryptotome.com', 
+        href: 'https://exchange.talkcryptotome.com/#/swap', 
       },
       {
         label: 'Liquidity',
         href:
-          'https://liquidity.talkcryptotome.com',
+          'https://exchange.talkcryptotome.com/#/liquidity',
       },
     ],
   },
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://farm.talkcryptotome.com',
+    href: '/farm',
   },
   {
     label: 'Pool',
     icon: 'PoolIcon',
-    href: 'https://pool.talkcryptotome.com',
+    href: '/pool',
   },
   {
     label: 'Vault',
     icon: 'MoonIcon',
-    href: 'https://vault.talkcryptotome.com',
+    href: '/vault',
   },
   {
     label: 'Bridge',
     icon: 'TicketIcon',
-    href: 'https://bridge.talkcryptotome.com',
+    href: '/bridge',
   },
   {
     label: 'Aggregator',
     icon: 'SunIcon',
-    href: 'https://aggregator.talkcryptotome.com',
+    href: '/tin',
   },
   {
     label: 'Charts',
@@ -52,11 +52,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'DexGuru',
-        href: 'https://dex.talkcryptotome.com',
+        href: '/dex',
       },
       {
         label: 'PooCoins',
-        href: 'https://poo.talkcryptotome.com',
+        href: '/poo',
       },
     ],
   },
