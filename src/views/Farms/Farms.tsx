@@ -92,7 +92,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   return (
     <Page>
       <div style={style}>
-        <Heading as="h1" size="lg" color="primary" mb="50px" style={{ textAlign: 'center' }}>
+        <Heading as="h1" size="md" color="primary" mb="50px" style={{ textAlign: 'center' }}>
           {tokenMode
             ? TranslateString(10004, 'Stake tokens to earn TCTM')
             : TranslateString(10004, 'Stake LP tokens to earn TCTM')}
