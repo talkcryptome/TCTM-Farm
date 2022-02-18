@@ -21,8 +21,17 @@
     "jsx": "react-jsx",
     "strictNullChecks": false,
     "noImplicitAny": false,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    //from swap 
+    "alwaysStrict": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "downlevelIteration": true,
+    "types": ["react-spring", "jest"]
+
+
   },
+  "exclude": ["node_modules", "cypress"],
   "include": [
     "src"
   ]
