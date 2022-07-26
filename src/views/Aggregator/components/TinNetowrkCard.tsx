@@ -28,11 +28,11 @@ const TinNetowrkCard = () => {
     <StyledTwitterCard>
       <CardBody>
         <Heading size="xl" mb="24px">
-          Use to see all your coins across multiple chains in your wallets, and all of your Farms and Pools in one place. Enter your wallet address to get started. 
+          Use to see all your coins across multiple chains in your wallet, and all of your Farms and Pools in one place. Enter your wallet address to get started. 
         </Heading>
         <Iframe id="iframe-widget" 
                 height='1005'
-                url='https://tctm-aggregate.herokuapp.com/'
+                url='https://tctm-aggregate.herokuapp.com'
                 width="100%"/>
                 
       </CardBody>
